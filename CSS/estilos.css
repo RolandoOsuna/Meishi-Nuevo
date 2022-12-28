@@ -1,0 +1,134 @@
+/* GLOBALES */
+body{
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.bg-header{
+    position: relative;
+    height: 100vh;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0f0c29, #302b63,#24243e );  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0 10% 0 10%;
+}
+.titulo-header{
+   margin: 8% 0;
+}
+.carrusel-header img{
+    width: 100%;
+    height: 500px;
+    border-radius: 6rem;
+    object-fit: cover;
+}
+
+/* SECTION-1 */
+.section-1{
+    height: 100vh;
+    background-color: #EBEFF8;
+}
+.section-1 img{
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* SECTION-2 ACERCA DE */
+.contenedor{
+    width: 1050px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor .card-acerca-de{
+    position: relative;
+    cursor: pointer;
+}
+
+.contenedor .card-acerca-de .face{
+    width: 240px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.contenedor .card-acerca-de .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    border-radius: 3rem;
+}
+
+.contenedor .card-acerca-de:hover .face.face1{
+    background: #ff0057;
+    transform: translateY(20px);
+}
+
+.contenedor .card-acerca-de .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.contenedor .card-acerca-de:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.contenedor .card-acerca-de .face.face1 .content img{
+    max-width: 100px;
+}
+
+.contenedor .card-acerca-de .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.contenedor .card-acerca-de .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+    border-radius: 3rem;
+}
+
+.contenedor .card-acerca-de:hover .face.face2{
+    transform: translateY(0);
+    border-radius: 0 0 3rem 3rem;
+    top: -20px;
+    /* height: 220px; */
+}
+
+.contenedor .card-acerca-de .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor .card-acerca-de .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+
+/* SECTION-3 */
+.section-3{
+    position: relative;
+    height: 120vh;
+}
+.bg-section-3{
+    position: absolute;
+    width: 900px;
+    height: 120vh;
+    background-color: #EBEFF8;
+    border: #333;
+    left: 0;
+}
