@@ -64,13 +64,15 @@ body{
 }
 
 .contenedor .card-acerca-de:hover .face.face1{
-    background: #ff0057;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     transform: translateY(20px);
 }
 
 .contenedor .card-acerca-de .face.face1 .content{
-    opacity: 0.2;
-    transition: 0.5s;
+    /* opacity: 0.2; */
+    transition:ease-in-out 0.5s;
 }
 
 .contenedor .card-acerca-de:hover .face.face1 .content{
@@ -115,20 +117,159 @@ body{
 }
 
 .contenedor .card-acerca-de .face.face2 .content a:hover{
-    background: #333;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #fff;
 }
 
 /* SECTION-3 */
+/* SECTION-3 */
 .section-3{
     position: relative;
     height: 120vh;
+    padding-left: 120px;
 }
 .bg-section-3{
     position: absolute;
-    width: 900px;
+    width: 65%;
     height: 120vh;
     background-color: #EBEFF8;
     border: #333;
     left: 0;
+    z-index: -10;
 }
+.carrusel-section-3{
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 25px 20px;
+}
+.item{
+    width: 320px;
+    transition: ease-in-out .5s;
+}
+.item:hover{
+    transform: scaleX(1.1) scaleY(1.1)  ;
+    transition: ease-in-out .5s;
+}
+
+/* SECTION-4 */
+.section-4{
+    position: relative;
+    height: 100vh;
+    background:url(../media/5915cd6db87cd382ecdf0401241fc14d.jpg) ;
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+}
+.cuadro-section-4{
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    background-color: #4e4b4b44;
+    backdrop-filter: blur(10px);
+    /* top: 50; */
+    left: 25%;
+    z-index: 5;
+}
+.circulo-1{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 10rem;
+    background: #5747D9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F2393, #5747D9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F2393, #5747D9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    top: 10%;
+    left: 18%;
+    z-index: 1;
+}
+.circulo-2{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    border-radius: 10rem;
+    background: #5747D9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F2393, #5747D9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F2393, #5747D9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    bottom: 10%;
+    left: 28%;
+    z-index: 1;
+}
+.circulo-3{
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    border-radius: 10rem;
+    background: #5747D9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F2393, #5747D9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F2393, #5747D9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    bottom: 10%;
+    right: 19%;
+    z-index: 1;
+}
+
+/* SECTION-5 */
+.section-5{
+    position: relative;
+    z-index: 10;
+}
+.circulo-1-section-5{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 10rem;
+    background: #5747D9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F2393, #5747D9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F2393, #5747D9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    top: 0;
+    right: -5%;
+    filter: blur(1.5rem);
+    z-index: 1;
+}
+.circulo-2-section-5{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 10rem;
+    background: #5747D9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F2393, #5747D9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F2393, #5747D9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    bottom: 0;
+    left: 0;
+    filter: blur(1.5rem);
+    z-index: 1;
+}
+
+
+/* CARRUSEL */
+.carrusel{
+    display: flex;
+    align-items: center;
+  }
+  .carrusel-items{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 30px 0;
+  }
+  .carrusel-item{
+    max-width: 400px;
+    min-width: 400px;
+    margin: 0 5px;
+  }
+  .carrusel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  .carrusel-item:hover{
+    transform: scale(1.2);
+  }
